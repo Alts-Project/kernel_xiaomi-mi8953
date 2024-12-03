@@ -1637,18 +1637,7 @@ static void *def_msm8952_wcd_mbhc_cal(void)
 	 * 210-290 == Button 2
 	 * 360-680 == Button 3
 	 */
-#ifdef CONFIG_MACH_XIAOMI_MIDO
-	btn_low[0] = 73;
-	btn_high[0] = 73;
-	btn_low[1] = 233;
-	btn_high[1] = 233;
-	btn_low[2] = 438;
-	btn_high[2] = 438;
-	btn_low[3] = 438;
-	btn_high[3] = 438;
-	btn_low[4] = 438;
-	btn_high[4] = 438;
-#elif (defined CONFIG_MACH_XIAOMI_TISSOT) || (defined CONFIG_MACH_XIAOMI_SAKURA) || (defined CONFIG_MACH_XIAOMI_DAISY) || (defined CONFIG_MACH_XIAOMI_VINCE)
+#if defined(CONFIG_MACH_XIAOMI_SAKURA) || defined(CONFIG_MACH_XIAOMI_TIFFANY) || defined(CONFIG_MACH_XIAOMI_VINCE)
 	btn_low[0] = 91;
 	btn_high[0] = 91;
 	btn_low[1] = 259;
@@ -1659,17 +1648,6 @@ static void *def_msm8952_wcd_mbhc_cal(void)
 	btn_high[3] = 488;
 	btn_low[4] = 488;
 	btn_high[4] = 488;
-#elif defined CONFIG_MACH_XIAOMI_YSL
-	btn_low[0] = 100;
-	btn_high[0] = 100;
-	btn_low[1] = 200;
-	btn_high[1] = 200;
-	btn_low[2] = 450;
-	btn_high[2] = 450;
-	btn_low[3] = 500;
-	btn_high[3] = 500;
-	btn_low[4] = 500;
-	btn_high[4] = 500;
 #else
 	btn_low[0] = 75;
 	btn_high[0] = 75;
